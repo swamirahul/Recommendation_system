@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul 15 14:02:30 2019
+
+@author: vaibhavswami
+"""
+s="pwkew"
+
+
+str_list = []
+max_length = 0
+
+for x in s:
+    if x in str_list:
+        str_list = str_list[str_list.index(x)+1:]
+        print("before Append string list",str_list)
+
+    str_list.append(x)  
+    print("After Append string list",str_list)
+    max_length = max(max_length, len(str_list))
+    print("before length",max_length)
+
+print("Final Length",max_length)
+        
